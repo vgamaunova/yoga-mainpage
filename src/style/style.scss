@@ -1,0 +1,66 @@
+body, ul{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+*{
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Champagne';
+  src:url('../fonts/Champagne & Limousines Bold.ttf');
+}
+$text-color:#555;
+$hover-color:#5363db;
+.container{
+  max-width: 1700px;
+  width: 80%;
+  margin: auto;
+}
+//header
+.logo-wrapper, .navigation-list{
+  float: left;
+  text-align: center;
+  width: 16.66%;
+  vertical-align: middle;
+}
+.logo{
+  &-text{
+    text-transform: uppercase;
+    font-size:24px;
+    color:$hover-color;
+    line-height: 1;
+    font-family:'Champagne';
+    margin-top: -15px;
+  }
+}
+.navigation{
+  &-list{
+    width: 41.6%;
+  }
+  &-item{
+    padding: 40px 10px;
+    display: inline-block;
+    text-align: center;
+  }
+  &-link{
+    font-size: 14px;
+    color:$text-color;
+    font-family: 'Open Sans:600', sans-serif;
+
+    &:hover, &.active{
+      color:$hover-color;
+      &:after{
+        content:'';
+        display: block;
+        width: 30px;
+        height: 2px;
+        background: $hover-color;
+        margin: auto;
+      }
+    }
+
+  }
+}

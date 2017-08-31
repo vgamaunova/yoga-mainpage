@@ -8,16 +8,26 @@ a{
 *{
   box-sizing: border-box;
 }
+input, select{
+  width: 100%;
+  background: transparent;
+}
 @font-face {
   font-family: 'Champagne';
   src:url('../fonts/Champagne & Limousines Bold.ttf');
 }
+@font-face {
+  font-family: 'FreestyleScript';
+  src:url('../fonts/FreestyleScript.ttf');
+}
 $text-color:#555;
 $hover-color:#5363db;
+$background-color:#f2f2f2;
 .container{
   max-width: 1700px;
   width: 80%;
   margin: auto;
+  font-family: 'Open Sans', sans-serif;
 }
 //header
 .logo-wrapper, .navigation-list{
@@ -48,7 +58,7 @@ $hover-color:#5363db;
   &-link{
     font-size: 14px;
     color:$text-color;
-    font-family: 'Open Sans:600', sans-serif;
+    font-weight: 600;
 
     &:hover, &.active{
       color:$hover-color;
@@ -63,4 +73,69 @@ $hover-color:#5363db;
     }
 
   }
+}
+//contact form
+.contact{
+  &-form{
+    clear:both;
+    background: url('../images/bg-contact-form.png') center center;
+    background-size: cover;
+    overflow: hidden;
+    &-wrapper{
+      width: 300px;
+      background: #ffffff;
+      border-radius:15px;
+      float: left;
+      padding: 30px;
+      font-weight:600;
+      margin: 40px 40px 40px 60px;
+      &:after{
+        content:'';
+        height: 1px;
+        display: block;
+        clear: both;
+      }
+    }
+    &-button{
+      width: 75%;
+      float: right;
+      margin-top: 20px;
+    }
+    &-title{
+      font-size: 26px;
+      color:$hover-color;
+      padding-bottom: 15px;
+    }
+  }
+  &-title{
+    font-size: 48px;
+    line-height: 1;
+    color:#fff;
+    font-weight: 600;
+    padding-top: 150px;
+  }
+  &-description{
+    font-family: 'FreestyleScript';
+    font-size: 40px;
+    color:#fff;
+    padding-bottom: 150px;
+  }
+}
+.form-control{
+  margin: 10px 0;
+  border:1px solid transparent;
+  padding: 15px;
+  background: $background-color;
+  border-radius:10px;
+  color:#888;
+}
+.btn{
+  background: $hover-color;
+  color:#fff;
+  font-weight: 600;
+  padding: 15px;
+  font-size: 16px;
+
+  border:none;
+  border-radius:10px;
 }

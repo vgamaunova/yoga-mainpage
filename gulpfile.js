@@ -33,8 +33,8 @@ var path = {
     watch: {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
-        sass: 'src/sass/**/*.scss',
-        img: 'src/img/*',
+        sass: 'src/style/**/*.scss',
+        img: 'src/images/*',
         fonts: 'src/fonts/**/*.*'
     },
     clean: './assets'

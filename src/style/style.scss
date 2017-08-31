@@ -5,6 +5,10 @@ body, ul{
 a{
   text-decoration: none;
 }
+img{
+  width: 100%;
+  height: auto;
+}
 *{
   box-sizing: border-box;
 }
@@ -138,4 +142,63 @@ $background-color:#f2f2f2;
 
   border:none;
   border-radius:10px;
+}
+.title{
+  font-size: 30px;
+  text-transform: uppercase;
+  color:$hover-color;
+  font-weight: 600;
+  text-align: center;
+}
+.section{
+  &-description{
+    font-size: 40px;
+    font-family: 'FreestyleScript';
+    text-align: center;
+    color:#777;
+  }
+  &-row{
+    margin: 0 15px;
+    clear:both;
+
+  }
+  &-col{
+    padding: 15px;
+    float: left;
+    &-2{
+      width: 50%;
+    }
+  }
+}
+//programs
+#programs{
+  padding: 60px 0;
+}
+.program{
+  &-item{
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #ccc;
+    padding: 40px 10px 40px 50px;
+    &-title{
+      font-size: 20px;
+      font-weight: 600;
+      color:#777;
+      text-transform: uppercase;
+    }
+    &-description{
+      font-size: 14px;
+      color:$text-color;
+      padding: 10px 0;
+    }
+    &-qualification{
+      font-size: 14px;
+      color:#999;
+    }
+  }
+  &-images{
+    width: 60%;
+    float:left;
+    margin:-30px 10% -45px -50px;
+  }
 }

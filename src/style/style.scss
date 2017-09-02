@@ -1,6 +1,10 @@
+@import "../../bower_components/font-awesome/css/font-awesome.min";
 body, ul{
   margin: 0;
   padding: 0;
+}
+ul{
+  list-style: none;
 }
 a{
   text-decoration: none;
@@ -152,7 +156,11 @@ $background-color:#f2f2f2;
   color:$hover-color;
   font-weight: 600;
   text-align: center;
+  &-left{
+    text-align: left;
+  }
 }
+
 .section{
   &-description{
     font-size: 40px;
@@ -217,5 +225,52 @@ $background-color:#f2f2f2;
   &-item{
     width: 25%;
     float: left;
+    position: relative;
+    height: 100%;
+    line-height: 0;
+    cursor: pointer;
+    &:hover{
+      & .gallery-item-hover{
+        opacity: 1;
+      }
+    }
+    &-hover{
+      height: 100%;
+      width: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      transition: opacity 1s;
+      background: rgba(83,99,219,.7);
+      &:after{
+        content: "";
+        padding: 20px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        margin: auto;
+        display: block;
+        color:$hover-color;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+//about us
+.about{
+  &-description{
+    padding-right: 6%;
+  }
+  &-caroiusel{
+    &-item{
+      overflow: hidden;
+      border-radius: 10px;
+      line-height: 0;
+    }
   }
 }

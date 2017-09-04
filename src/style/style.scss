@@ -1,4 +1,5 @@
 @import "../../bower_components/font-awesome/css/font-awesome.min";
+@import "../../bower_components/owl.carousel/dist/assets/owl.carousel";
 body, ul{
   margin: 0;
   padding: 0;
@@ -45,7 +46,7 @@ $background-color:#f2f2f2;
 //header
 header{
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   left: 0;
   right: 0;
   top: 0;
@@ -214,7 +215,16 @@ header{
   padding: 60px 0;
 }
 .program{
+  &-description{
+    &-wrapper{
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      left: 70%;
+    }
+  }
   &-item{
+    position: relative;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 1px 1px 1px #ccc;
@@ -222,15 +232,17 @@ header{
     &-title{
       font-size: 20px;
       font-weight: 600;
-    text-transform: uppercase;
+      text-transform: uppercase;
       color:#777;
       &-images{
-        width: auto;}
+        width: auto;
+      }
     }
     &-description{
       font-size: 14px;
       color:$text-color;
       padding: 10px 0;
+
     }
     &-qualification{
       font-size: 14px;
@@ -241,7 +253,7 @@ header{
     width: 60%;
     max-width: 270px;
     float:left;
-    margin:-50px 5% -60x -50px;
+    margin:-50px 5% -60px -50px;
   }
 }
 //gallery
@@ -348,7 +360,10 @@ header{
 //prices
 #prices{
   padding: 100px 0;
+  background: url('../images/bg-lotos-decoration.png') left bottom no-repeat;
+  background-size: 100%;
 }
+
 .prices{
   &-item{
     border-radius: 10px;
@@ -356,7 +371,9 @@ header{
     padding-bottom: 60px;
     box-shadow: 1px 1px 1px #ccc;
   }
+
   &-description{
+
     &-list{
       padding: 40px 80px;
       text-align: center;
@@ -416,6 +433,70 @@ header{
     }
 
   }
+  &-carousel{
+    background: #fff;
+    padding: 30px;
+    box-shadow: 1px 1px 1px #ccc;
+    &:after{
+      content: "";
+      display: block;
+      height: 1px;
+      clear: both;
+    }
+    &-author{
+      width: 100px;
+      margin: 0 30px;
+      float: left;
+    }
+    &-description{
+      position: relative;
+      &:after{
+        content: "";
+        display: block;
+        height: 1px;
+        clear: both;
+      }
+      &-author{
+        position: relative;
+        margin: 30px 0 30px 160px;
+        padding-left: 30px;
+        &-name{
+          font-size: 16px;
+          color:$hover-color;
+          font-weight:600;
+        }
+        position: relative;
+        &:after{
+          width:1px;
+          height: 100px;
+          background: #d7d7d7;
+          content: '';
+          display: block;
+          position: absolute;
+          top: -35px;
+          left: 0;
+        }
+      }
+      &-trainer{
+        margin-bottom: -50%;
+        position: absolute;
+        left: 250px;
+        &-logo{
+          width: 70px;
+          float: left;
+          margin-right: 10px;
+          & img{
+            width: auto;
+          }
+        }
+      }
+      &-text{
+        font-style: italic;
+        padding: 0 30px;
+        margin-left: 160px;
+      }
+    }
+  }
 }
 //footer
 .footer{
@@ -451,4 +532,13 @@ header{
 
     }
   }
+}
+//carousel
+.owl-prev, owl-next{
+  padding: 5px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  background: #fff;
+  box-shadow: 1px 1px 1px #ccc;
 }

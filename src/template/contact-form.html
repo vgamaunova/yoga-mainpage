@@ -1,21 +1,31 @@
 <section id="contact-form" class="contact-form">
     <div class="container">
         <div class="contact-form-wrapper">
-            <div class="form">
-                <div class="contact-form-title">Trial Class</div>
-                <input type="text" class="form-control" placeholder="Enter your name">
-                <input type="tel" class="form-control"  placeholder="Enter your phone">
-                <select  class="form-control" class="form-control">
-                    <option disabled selected>Chose your class</option>
-                    <option>option 1</option>
-                    <option>option 2</option>
-                    <option>option 2</option>
-                </select>
-                <div class="contact-form-button">
-                    <input type="submit" class="btn" value="Try it">
-                </div>
+            <form action="" id="contact-form-submit">
 
-            </div>
+                <div class="form">
+                    <div class="contact-form-title">Trial Class</div>
+                    <div class="form-group">
+                        <input type="text" id="name" class="form-control" placeholder="Enter your name">
+                        <div id="nameLabel" class="error"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel"  id="phone" class="form-control"  placeholder="Enter your phone">
+                        <div id="telephoneLabel" class="error"></div>
+                    </div>
+
+                    <select  class="form-control" class="form-control">
+                        <option disabled selected>Chose your class</option>
+                        <option>option 1</option>
+                        <option>option 2</option>
+                        <option>option 2</option>
+                    </select>
+                    <div class="contact-form-button">
+                        <input type="submit" class="btn" value="Try it">
+                    </div>
+
+                </div>
+            </form>
         </div>
         <div class="contact-description-wrapper">
             <div class="contact-title">

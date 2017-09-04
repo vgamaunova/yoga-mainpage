@@ -2,6 +2,8 @@
 body, ul{
   margin: 0;
   padding: 0;
+  font-size: 14px;
+  line-height: 22px;
 }
 ul{
   list-style: none;
@@ -104,6 +106,7 @@ header{
     background: url('../images/bg-contact-form.png') center center;
     background-size: cover;
     overflow: hidden;
+    margin-top: 104px;
     &-wrapper{
       width: 300px;
       background: #ffffff;
@@ -412,5 +415,40 @@ header{
       text-transform: uppercase;
     }
 
+  }
+}
+//footer
+.footer{
+  color:#fff;
+  background: $hover-color;
+  padding: 100px 0;
+  &-title{
+    color:#fff;
+    margin-bottom: 40px;
+  }
+  & a{
+    color:#fff;
+  }
+  &-contact{
+    &-description{
+      &-link{
+        display: block;
+      }
+    }
+    &-icon{
+      width: 30px;
+      margin-right: 5px;
+      float: left;
+      & img{
+        width:auto;
+      }
+    }
+    &-list{
+    }
+  }
+  &-social{
+    &-list{
+
+    }
   }
 }

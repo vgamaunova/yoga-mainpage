@@ -556,7 +556,7 @@ header{
   &-social{
     &-list{
       text-align: center;
-      margin:autos;
+      margin:auto;
 
     }
     &-item{
@@ -567,13 +567,40 @@ header{
   }
 }
 //carousel
-.owl-prev, owl-next{
+.owl-prev, .owl-next{
   padding: 5px;
   border-radius: 50%;
   overflow: hidden;
   position: absolute;
   background: #fff;
   box-shadow: 1px 1px 1px #ccc;
+  font-size: 0;
+  display: inline-block;
+  font: normal normal normal 0px FontAwesome;
+
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  &:after{
+    font-size:20px;
+    content: "\f054";
+    color:$hover-color;
+    font-size: 20px;
+    display: block;
+    padding: 4px 5px 4px 10px;
+  }
+}
+.owl-next{
+  right: -43px;
+}
+.owl-prev{
+  left: 0;
+  &:after{
+    content:"\f053";
+    padding: 4px 7px;
+  }
+
 }
 @media (max-width: 1400px) {
 

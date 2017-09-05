@@ -28,7 +28,7 @@ $(document).ready(function(){
     $('.navigation-link').on('click', function (){
         var id  = $(this).attr('href'),
         top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
+        $('body,html').animate({scrollTop: top-50}, 1500);
         $('.navigation-item').removeClass('active');
         $(this).closest('.navigation-item').addClass('active');
         if($(window).width() < 770){

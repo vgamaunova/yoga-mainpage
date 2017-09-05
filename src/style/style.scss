@@ -93,17 +93,19 @@ header{
     font-size: 14px;
     color:$text-color;
     font-weight: 600;
+    &:after{
+    content:'';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: transparent;
+    margin: auto;
+  }
 
     &:hover, &.active{
       color:$hover-color;
       &:after{
-        content:'';
-        display: block;
-        width: 30px;
-        height: 2px;
-        background: $hover-color;
-        margin: auto;
-      }
+        background: $hover-color;}
     }
 
   }

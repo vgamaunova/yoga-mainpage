@@ -646,7 +646,14 @@ header{
       color:$hover-color;
       font-size: 40px;
       margin-top: 40px;
-      }
+        position: absolute;
+    }
+  }
+  .navigation-link:hover:after, .navigation-link.active:after{
+    margin: 0;
+  }
+  .contact-form-wrapper{
+    width: 100%;
   }
 
 }

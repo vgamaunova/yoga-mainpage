@@ -29,6 +29,33 @@ $(document).ready(function(){
         var id  = $(this).attr('href'),
         top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1500);
+        $('.navigation-item').removeClass('active');
+        $(this).closest('.navigation-item').addClass('active');
+        if($(window).width() < 770){
+            closeNav();
+        }
+    } )
+    //open top navigation
+    var menuOpen = $('.navigation-button');
+    var menuClose = $('.navigation-button-close');
+    var navigationList =  $('.navigation-wrapper');
+    //open top navigation
+    function openNav() {
+        navigationList.fadeIn();
+        menuOpen.fadeOut();
+        menuClose.fadeIn();
+    }
+    menuOpen.on('click', function (){
+        openNav()
+    } )
+    //close top navigation
+    function closeNav() {
+        navigationList.fadeOut();
+        menuOpen.fadeIn();
+        menuClose.fadeOut();
+    }
+    menuClose.on('click', function (){
+        closeNav()
     } )
     // validation form
     function validationForm() {

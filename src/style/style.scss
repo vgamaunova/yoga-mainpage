@@ -60,6 +60,11 @@ header{
   vertical-align: middle;
 }
 .logo{
+  &-wrapper{
+    &-mobile{
+      display: none;
+    }
+  }
   &-text{
     text-transform: uppercase;
     font-size:24px;
@@ -165,7 +170,7 @@ header{
   font-weight: 600;
   padding: 15px;
   font-size: 16px;
-
+  cursor:pointer;
   border:none;
   border-radius:10px;
 }
@@ -287,6 +292,17 @@ header{
       opacity: 0;
       transition: opacity 1s;
       background: rgba(83,99,219,.7);
+      & i{
+        position: absolute;
+        left: 50%;
+        right: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+        color: $hover-color;
+
+      }
       &:after{
         content: "";
         padding: 20px;
@@ -373,6 +389,13 @@ header{
     overflow: hidden;
     padding-bottom: 60px;
     box-shadow: 1px 1px 1px #ccc;
+    &.hovered{
+
+      box-shadow: 2px 2px 2px #ccc;
+      & > .prices-title{
+        font-weight: 600;
+      }
+    }
   }
 
   &-description{
@@ -532,7 +555,14 @@ header{
   }
   &-social{
     &-list{
+      text-align: center;
+      margin:autos;
 
+    }
+    &-item{
+      display: inline-block;
+      padding: 20px;
+      padding: 20px;
     }
   }
 }

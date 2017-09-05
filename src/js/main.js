@@ -57,6 +57,11 @@ $(document).ready(function(){
     menuClose.on('click', function (){
         closeNav()
     } )
+    // effect after hover
+    $('.prices-button').hover(function () {
+        $(this).closest('.prices-item').toggleClass("hovered");
+
+    });
     // validation form
     function validationForm() {
 

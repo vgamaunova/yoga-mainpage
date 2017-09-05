@@ -76,6 +76,9 @@ header{
   &-list{
     width: 41.6%;
   }
+  &-button{
+    display: none;
+  }
   &-item{
     padding: 40px 10px;
     display: inline-block;
@@ -542,3 +545,109 @@ header{
   background: #fff;
   box-shadow: 1px 1px 1px #ccc;
 }
+@media (max-width: 1400px) {
+
+  .program-description-wrapper{
+    width: 43%;
+    left: 78%;
+  }
+  .prices-description-list,.prices-title{
+    padding: 20px 10px;
+  }
+  .section-description,.contact-description{
+    line-height: 2;
+  }
+ .features-title{
+   padding: 0 25px;
+ }
+}
+@media (max-width: 1200px) {
+  .section-col-2{
+    width: 100%;
+  }
+  .program-item{
+    padding: 20px;
+  }
+  .footer .section-col-2{
+    width: 50%;
+  }
+  .program-description-wrapper{
+    width: 56%;
+    left: 68%;
+  }
+  .program-images{
+    width: 33%;
+  }
+  .section-col-4,  .section-col-3{
+    width: 50%;
+  }
+}
+
+@media (max-width: 770px) {
+  .program-description-wrapper{
+    position: static;
+    transform: none;
+    width: 100%;
+    text-align: center;
+  }
+  .program-images{
+    margin: auto auto 30px auto;
+    float:none;
+  }
+  .gallery-item{
+    width: 50%;
+  }
+
+  .contact-form-wrapper{
+     margin: 30px auto;
+     float: none;
+  }
+  .contact-title{
+    padding-top: 0;
+  }
+  .footer .section-col-2,  .section-col-3,  .section-col-4, .navigation-list{
+      width: 100%;
+    }
+  .section-description, .contact-description{
+    line-height: 1;
+    margin-top: 20px;
+  }
+  .prices-carousel-author,.prices-carousel-description-text, .prices-carousel-description-author{
+    float: none;
+    margin: auto;
+  }
+  .prices-carousel-description-author{
+    margin-top: 35px;
+  }
+//  nav
+  .logo-wrapper{
+    display: none;
+    &-mobile{
+      float: right;
+      display: block;
+      width: 30%;
+    }
+  }
+  header{
+    padding-bottom: 10px;
+  }
+  .navigation{
+    &-item{
+      display: block;
+      text-align: left;
+      padding: 24px;
+    }
+    &-wrapper{
+       display: none;
+     }
+    &-button{
+      display: block;
+      float: left;
+      color:$hover-color;
+      font-size: 40px;
+      margin-top: 40px;
+      }
+  }
+
+}
+
